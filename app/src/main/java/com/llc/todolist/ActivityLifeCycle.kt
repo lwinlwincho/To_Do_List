@@ -9,12 +9,14 @@ import com.llc.todolist.databinding.ActivityLifeCycleBinding
 class ActivityLifeCycle : AppCompatActivity() {
 
     private lateinit var binding: ActivityLifeCycleBinding
+    private var name: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLifeCycleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        name = "Hello"
         Log.d(TAG, "onCreate Called")
 
         binding.textView.text = TAG
@@ -36,6 +38,7 @@ class ActivityLifeCycle : AppCompatActivity() {
 
     override fun onPause() {
         super.onPause()
+
         Log.d(TAG, "onPause Called")
     }
 
@@ -46,6 +49,7 @@ class ActivityLifeCycle : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        name = null
         Log.d(TAG, "onDestroy Called")
     }
 
