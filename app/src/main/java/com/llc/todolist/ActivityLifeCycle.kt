@@ -5,12 +5,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import androidx.activity.viewModels
 import com.llc.todolist.databinding.ActivityLifeCycleBinding
+import com.llc.todolist.viewModels.FirstViewModel
 
 class ActivityLifeCycle : AppCompatActivity(), Delegate {
 
     private lateinit var binding: ActivityLifeCycleBinding
     private var name: String? = null
+
+
+    private val viewModel: FirstViewModel by viewModels()
+
 
     private val itemAdapter by lazy {
         ItemAdapter(
@@ -27,11 +33,14 @@ class ActivityLifeCycle : AppCompatActivity(), Delegate {
         name = "Hello"
         Log.d(TAG, "onCreate Called")
 
-        binding.textView.text = TAG
+        //binding.textView.text = TAG
         binding.btnNext.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
+
+        val firstName = viewModel.firstName
+        binding.textView.text = firstName
     }
 
     override fun onStart() {

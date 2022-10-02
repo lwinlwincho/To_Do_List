@@ -8,8 +8,13 @@
 
     <TextView
         android:id="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/btn_next"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        tools:text="Hello"
+        android:text="First Name"
+        />
 
     <Button
         android:id="@+id/btn_next"
