@@ -4,12 +4,20 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.llc.todolist.databinding.ActivityLifeCycleBinding
 
-class ActivityLifeCycle : AppCompatActivity() {
+class ActivityLifeCycle : AppCompatActivity(), Delegate {
 
     private lateinit var binding: ActivityLifeCycleBinding
     private var name: String? = null
+
+    private val itemAdapter by lazy {
+        ItemAdapter(
+            listener = {},
+            delegate = this
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,5 +63,9 @@ class ActivityLifeCycle : AppCompatActivity() {
 
     companion object {
         const val TAG = "MainActivity"
+    }
+
+    override fun onClickListener(model: MovieModel) {
+        Toast.makeText(this, model.toString(), Toast.LENGTH_LONG).show()
     }
 }
