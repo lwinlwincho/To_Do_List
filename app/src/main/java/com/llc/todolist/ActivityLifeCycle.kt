@@ -14,9 +14,7 @@ class ActivityLifeCycle : AppCompatActivity(), Delegate {
     private lateinit var binding: ActivityLifeCycleBinding
     private var name: String? = null
 
-
     private val viewModel: FirstViewModel by viewModels()
-
 
     private val itemAdapter by lazy {
         ItemAdapter(

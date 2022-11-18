@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/ToDoList/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/ToDoList/app/src/main/res/layout/activity_life_cycle.xml" value="0.1" />
+        <entry key="..\:/ToDoList/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/ToDoList/app/src/main/res/layout/fragment_argument.xml" value="0.1" />
+        <entry key="..\:/ToDoList/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/ToDoList/app/src/main/res/layout/list_item.xml" value="0.13994565217391305" />
+        <entry key="..\:/ToDoList/app/src/main/res/layout/note_list.xml" value="0.10104166666666667" />
+        <entry key="..\:/ToDoList/app/src/main/res/menu/layout_menu.xml" value="0.12777777777777777" />
       </map>
     </option>
   </component>

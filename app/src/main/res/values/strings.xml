@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">To Do List</string>
-    <string name="setting">Setting</string>
+    <string name="titleHint">Title</string>
+    <string name="noteHint">Enter your note.</string>
+    <string name="label">llabel</string>
+    <string name="setting">settin</string>
     <string name="next">Next</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
